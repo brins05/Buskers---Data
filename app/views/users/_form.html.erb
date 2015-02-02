@@ -1,0 +1,65 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :users_id %><br>
+    <%= f.number_field :users_id %>
+  </div>
+  <div class="field">
+    <%= f.label :users_name %><br>
+    <%= f.text_field :users_name %>
+  </div>
+  <div class="field">
+    <%= f.label :users_pass %><br>
+    <%= f.text_field :users_pass %>
+  </div>
+  <div class="field">
+    <%= f.label :users_mail %><br>
+    <%= f.text_field :users_mail %>
+  </div>
+  <div class="field">
+    <%= f.label :users_birthdate %><br>
+    <%= f.date_select :users_birthdate %>
+  </div>
+  <div class="field">
+    <%= f.label :users_origin %><br>
+    <%= f.text_field :users_origin %>
+  </div>
+  <div class="field">
+    <%= f.label :users_description %><br>
+    <%= f.text_field :users_description %>
+  </div>
+  <div class="field">
+    <%= f.label :users_avatar %><br>
+    <%= f.text_field :users_avatar %>
+  </div>
+  <div class="field">
+    <%= f.label :users_links %><br>
+    <%= f.text_field :users_links %>
+  </div>
+  <div class="field">
+    <%= f.label :users_status %><br>
+    <%= f.number_field :users_status %>
+  </div>
+  <div class="field">
+    <%= f.label :users_lon %><br>
+    <%= f.text_field :users_lon %>
+  </div>
+  <div class="field">
+    <%= f.label :users_lat %><br>
+    <%= f.text_field :users_lat %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
