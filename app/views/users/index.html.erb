@@ -13,8 +13,8 @@
       <th>Avatar</th>
       <th>Links</th>
       <th>Status</th>
-      <th>Lon</th>
       <th>Lat</th>
+      <th>Lon</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -32,8 +32,8 @@
         <td><%= image_tag user.users_avatar, :width => 100, :heigth => 100, :crop => :fill, :radius => :max %></td>
         <td><%= user.users_links %></td>
         <td><%= user.users_status %></td>
-        <td><%= user.users_lon %></td>
         <td><%= user.users_lat %></td>
+        <td><%= user.users_lon %></td>
         <td><%= button_to 'Show', user, :class => "btn btn-primary btn-sm", :method => :get  %></td>
         <td><%= button_to 'Edit', edit_user_path(user), :class => "btn btn-info btn-sm", :method => :get %></td>
         <td><%= button_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-warning btn-sm", :method => :delete %></td>
