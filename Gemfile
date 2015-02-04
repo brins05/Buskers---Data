@@ -12,6 +12,7 @@ gem 'sqlite3', group: :development
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'activerecord-postgresql-adapter'
 end
 
 # Use SCSS for stylesheets
