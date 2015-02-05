@@ -7582,3 +7582,9 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-02-05 02:25:28 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-05 02:25:28 +0100
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "Users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "users_name" varchar(255), "users_pass" varchar(255), "users_mail" varchar(255), "users_birthdate" date, "users_origin" varchar(255), "users_description" varchar(255), "users_avatar" varchar(255), "users_links" varchar(255), "users_status" integer, "users_lon" varchar(255), "users_lat" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150205011852')
