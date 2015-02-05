@@ -14,6 +14,8 @@
 
     <%= stylesheet_link_tag "application", :media => "all" %>
 
+    <%= stylesheet_link_tag "style.css" %>
+
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
@@ -47,9 +49,10 @@
       </button>
       <div class="navbar-collapse collapse navbar-responsive-collapse">
         <ul class="nav navbar-nav">
+        <li align="left"><img src="http://nsm08.casimages.com/img/2014/12/10//14121011141118601812785313.png" align="right"></li>
           <li><%= link_to "Buskers", root_path  %></li>
           <li><%= link_to "Users", users_path  %></li>
-          <li align="center"><img src="http://nsm08.casimages.com/img/2014/12/10//14121011141118601812785313.png" align="right"></li>
+          
           
         </ul>
       </div>
@@ -58,28 +61,35 @@
 
       <div class="container">
          <div class="row">
-          <!-- <div class="col-lg-9"> commenté pour pouvoir centrer, en libérant le bloc de droite -->
+           <div> <!-- commenté pour pouvoir centrer, en libérant le bloc de droite -->
           <div>
             <%= bootstrap_flash %>
             <%= yield %>
           </div>
-          <!-- <div class="col-lg-3"> -->
-            <!-- <div class="well sidebar-nav">
+           
+           <!--
+           <div class="col-lg-3"> 
+           
+             <div class="well sidebar-nav">
               <h3>Sidebar</h3>
               <ul class="nav nav-list">
                 <li class="nav-header">Sidebar</li>
                 <li><%= link_to "Users", users_path  %></li>
                 
               </ul>
-            </div> -->
-          <!-- </div> commenté pour enlever la side bar qui empiétait sur le tableau -->
-        </div>   
+            </div> 
+           </div> 
+
+           <!-- commenté pour enlever la side bar qui empiétait sur le tableau -->
+          <!-- 
+        </div>   -->
 
         <footer>
           
         </footer>
 
-      </div> <!-- /container -->
+      </div> 
+      </div>  <!-- /container -->
 
     </body>
   </html>
