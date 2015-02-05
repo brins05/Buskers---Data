@@ -7588,3 +7588,16 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-05 02:25:28
   [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
   [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150205011852')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RenameUsersTable (20150205023036)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "Users" RENAME TO "users"[0m
+SQLite3::SQLException: there is already another table or index with this name: users: ALTER TABLE "Users" RENAME TO "users"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RenameUsersTable (20150205023036)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" RENAME TO "Users"[0m
+SQLite3::SQLException: there is already another table or index with this name: Users: ALTER TABLE "users" RENAME TO "Users"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
