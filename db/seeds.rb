@@ -7,7 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create(
-    users_id: 1,
     users_name: "Moncef",
     users_pass: "pass1",
     users_mail: "biaz@me.com",
@@ -22,7 +21,6 @@ User.create(
   )
 
 User.create(
-    users_id: 2,
     users_name: "Yacine",
     users_pass: "pass2",
     users_mail: "yacine.brini@polytechnique.edu",
